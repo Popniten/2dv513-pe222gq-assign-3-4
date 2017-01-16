@@ -1,0 +1,26 @@
+{
+  "name": "personal-movie-inventory",
+  "version": "1.0.0",
+  "description": "A simple system to keep track on your DVDs.",
+  "author": "Pär Eriksson <pe222gq@student.lnu.se>",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.6",
+    "mongodb": "^2.2.21",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.3.0",
+    "watchify": "^3.8.0"
+  },
+  "scripts": {
+    "start": "",
+    "compile-client": "",
+    "db-setup": "node data/setup.js",
+    "watch": "watchify -t [ babelify --presets [ es2015 ] ] client/app.js -o static/bundle.js -v --poll"
+  }
+}

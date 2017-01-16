@@ -1,0 +1,207 @@
+<div class="jumbotron text-center">
+  <h1>Personal Movie Inventory</h1>
+  <p>
+    Listing movies.
+  </p>
+</div>
+
+<div class="container">
+  <h2>Movies</h2>
+  <p>
+  </p>
+  <p>
+    <!-- MODALS -->
+
+    <!-- Buttons for modals -->
+    <button
+      type="button"
+      class="btn btn-default navbar-btn btn-success"
+      id="searchMovies"
+      data-toggle="modal"
+      data-target="#modalSearch">
+      Search
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-default navbar-btn btn-primary"
+      id="btnClearSearch">
+      Clear search
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-default navbar-btn btn-success"
+      id="addMovie"
+      data-toggle="modal"
+      data-target="#modalAddMovie">
+      Add new movie
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-default navbar-btn btn-success"
+      id="viewLoans"
+      data-toggle="modal"
+      data-target="#modalViewLoans">
+      View loans
+    </button>
+
+    <!-- Search -->
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="modalSearch" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Search movie</h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <span class="input-group-addon">Search: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="searchInput" placeholder="Search for...">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"  id="searchButton" data-dismiss="modal">Search</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add New Movie -->
+    <div class="modal fade" id="modalAddMovie" tabindex="-1" role="dialog" aria-labelledby="modalAddMovie" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add new movie</h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <span class="input-group-addon">Title: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="inputMovieTitle">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">Release year: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="inputMovieYear">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">Actors: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="inputMovieActors">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnAddMovie">Add movie</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Movie -->
+    <div class="modal fade" id="modalEditMovie" tabindex="-1" role="dialog" aria-labelledby="modalEditMovie" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Add new movie</h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <span class="input-group-addon">Title: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="inputEditMovieTitle">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">Release year: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="inputEditMovieYear">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">Actors: </span>
+              <input type="text" class="form-control" aria-describedby="basic-addon3" id="inputEditMovieActors">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnUpdateMovie">Update movie</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View loans -->
+    <div class="modal fade" id="modalViewLoans" tabindex="-1" role="dialog" aria-labelledby="modalViewLoans" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Movies on loan</h4>
+          </div>
+          <div class="modal-body" id="loanListContainer">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loan out -->
+    <div class="modal fade" id="modalAddLoan" tabindex="-1" role="dialog" aria-labelledby="modalAddMovie" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Loan movie to</h4>
+          </div>
+          <div class="modal-body">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="personsDropdown">
+
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </p>
+  <div class="table-responsive">
+    <table class="table" id="movieTable">
+      <thead>
+        <tr>
+          <th>
+          </th>
+          <th>
+            Movie Title
+          </th>
+          <th>
+            Year
+          </th>
+          <th>
+            Added
+          </th>
+          <th>Actors</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <!-- <div class="text-center">
+      <div class="btn-group btn-group-lg" role="group" aria-label="...">
+        <button type="button" class="btn btn-default" aria-label="Left Align" title="Previous page" id="prevPage" disabled>
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default" aria-label="Left Align" title="Next page" id="nextPage">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+</div>
