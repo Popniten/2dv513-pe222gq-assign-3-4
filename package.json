@@ -18,9 +18,9 @@
     "watchify": "^3.8.0"
   },
   "scripts": {
-    "start": "",
-    "compile-client": "",
-    "db-setup": "node data/setup.js",
+    "start": "node main.js",
+    "sqlite-setup": "node data/setup-sqlite.js",
+    "mongo-setup": "node data/setup-mongodb.js",
     "watch": "watchify -t [ babelify --presets [ es2015 ] ] client/app.js -o static/bundle.js -v --poll"
   }
 }

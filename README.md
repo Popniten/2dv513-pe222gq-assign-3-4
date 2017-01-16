@@ -22,6 +22,9 @@ E/R Diagram of the database
 npm install
 
 npm start
+
+# Press 'Ctrl+C' to quit
+
 ```
 
 ### MongoDB instead of SQLite
@@ -33,7 +36,7 @@ Change the line `const USE_SQL = true` in `main.js` to `false`, then restart the
 To populate the database, run the following command from the project root.
 
 ```bash
-node data/setup-mongodb.js
+npm run setup-mongodb
 ```
 
 ### Empty database
@@ -41,5 +44,5 @@ node data/setup-mongodb.js
 If you want an empty database remove the file `data/pmi-data.sqlite` and then run:
 
 ```bash
-npm run db-setup
+npm run setup-sqlite
 ```
